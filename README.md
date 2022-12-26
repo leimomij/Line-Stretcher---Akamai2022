@@ -14,3 +14,16 @@ Attached is the fiber optic Line Stretcher manual for the specific Line Stretche
 
 In addition, here is a link for some good information on how a PID controller works: https://pidexplained.com/pid-controller-explained/
 
+
+allan_variance.py computes the Allan variance and Allan deviation analysis of recorded data
+
+init_adam_mod.py initializes the line stretcher using the ADAM module 505650
+
+load_adamdata.py loads data to the ADAM to control the line stretcher, following the protocol in the line stretcher manual
+
+VVMsubs.py initializes GPIB socket connection with the VVM vector voltmeter so that you can read in current phase and magnitude of signals
+
+VVM.py allows you to record data for a specified amount of time and saves it, not really needed since I adopted this code and put it in the control_linestretcher.py program
+
+control_linestretcher.py this is the actual program that implements the PID controller, and maintains 0 degrees of phase drift depending on signal phase read in
+
